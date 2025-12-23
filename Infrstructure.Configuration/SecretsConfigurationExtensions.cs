@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
-using System.Text.Json;
 using System.Text.RegularExpressions;
+using Infrstructure.Configuration;
 
-namespace Infrstructure.Configuration;
+namespace GlobalControl.Infrstructure.Configuration;
 
 public static class SecretsConfigurationExtensions
 {
@@ -50,7 +49,7 @@ public static class SecretsConfigurationExtensions
                 }
                 else
                 {
-                    return JsonSerializer.Serialize(value);
+                    return value;
                 }
             }
             else
